@@ -68,3 +68,31 @@ secondBookmark.innerHTML = `<p class="js-url-1 item__url">
 <li class="js-tag-1-1 item__tag">${secondBookmarkTag1}</li>
 <li class="js-tag-1-2 item__tag">${secondBookmarkTag2}</li>
 </ul> `;
+
+//Día 3
+
+const data = document.querySelector (".js-data")
+if(data.classList.contains("tableview")){data.classList.add("listview");
+data.classList.remove("tableview");
+}
+
+// 1. Mostrar el menú hamburguesa y dejarlo siempre visible.
+let showMenu = document.querySelector (".menudropdown");
+showMenu.classList.remove("collapsed");
+
+// 2. Seleccionamos el input con el document.querySelector
+const input_search_desc = document.querySelector(".js_in_search_desc");
+
+// 3. Simulamos que escribe la usuaria en el `input` de búsqueda.
+input_search_desc.value = "materiales";
+
+// 4. Recoger el valor del `input` en una variable.
+const descrSearchText = input_search_desc.value;
+
+const bmk_1_desc = document.querySelector(".bmk_1_desc");
+
+if(bmk_1_desc.includes(descrSearchText)){
+  bmk_1_desc.classList.remove("hidden");
+} 
+else{bmk_1_desc.classList.add("hidden");
+}

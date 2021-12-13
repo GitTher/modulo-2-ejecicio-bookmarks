@@ -108,3 +108,70 @@ function handleClickLinkDropdown (event){
 }
 
 burgerMenu.addEventListener('click', handleClickLinkDropdown);
+
+// Día 6 - Objetos
+
+const bmkData_1 = {
+  url: "https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-2-programando-la-web/javascript/2_1_intro_a_la_programacion",
+  desc: "JS en los materiales de Adalab",
+  seen: true,
+  tags_1: "javascript",
+  tags_2: "html",
+};
+
+const bmkData_2 = {
+  url: "https://thesmartcoder.dev/9-awesome-projects-you-can-build-with-vanilla-javascript/",
+  desc: "Ideas de proyectos JS",
+  seen: true,
+  tags_1: "javascript",
+  tags_2: "portfolio",
+};
+
+const bmkData_3 = {
+  url: "https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-1-html-y-css/1_1_intro_a_la_web",
+  desc: "HTML en los materiales de Adalab",
+  seen: false,
+  tags_1: "HTML",
+  tags_2: "CSS",
+};
+
+function renderBookmark (bmkData_1) {
+  const bmk1 = document.querySelector(".js-bookmark-1");
+  
+bmk1.innerHTML = `<p class="item__url">
+<a href="${bmkData_1.url}"
+  target="_blank" rel="noopener noreferrer">
+  ${bmkData_1.url}
+</a>
+</p>
+<p class="item__seen">
+<input type="checkbox" checked name="item_imp_2" id="item_imp_2">
+</p>
+<p class="item__desc bmk_1_desc">${bmkData_1.desc}</p>
+<ul class="item__tags">
+<li class="item__tag">${bmkData_1.tags_1}</li>
+<li class="item__tag">${bmkData_1.tags_2}</li>
+</ul>`
+} 
+
+
+function renderBookmark (bmkData_2) {
+  const bmk2 = document.querySelector(".js-bookmark-2");
+  
+bmk2.innerHTML = `<p class="item__url">
+<a href="${bmkData_2.url}"
+  target="_blank" rel="noopener noreferrer">
+  ${bmkData_2.url}
+</a>
+</p>
+<p class="item__seen">
+<input type="checkbox" checked name="item_imp_2" id="item_imp_2">
+</p>
+<p class="item__desc bmk_1_desc">${bmkData_2.desc}</p>
+<ul class="item__tags">
+<li class="item__tag">${bmkData_2.tags_1}</li>
+<li class="item__tag">${bmkData_2.tags_2}</li>
+</ul>`
+} 
+console.log(renderBookmark(bmkData_1));
+console.log(renderBookmark(bmkData_2));
